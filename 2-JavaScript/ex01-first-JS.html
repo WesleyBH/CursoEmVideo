@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<title>Ex01 - My First JS Exercise</title>
+	<link rel="shortcut icon" href="imgs/w.bmp" type="image/x-icon">
+	<link rel="stylesheet" href="css/style.css">
+
+	<style>
+		section {
+			min-width: 400px;
+			text-align: center;
+		}
+
+		#area {
+			background-color: black;
+			color: white;
+			width: 200px;
+			height: 200px;
+			line-height: 200px;
+			margin: auto;
+		}
+	</style>
+</head>
+
+<body>
+	<section>
+		<h1>Hello World!</h1>
+		<p>
+			This is my first script in JavaScript &#x1F643
+			<img src="imgs/vader-smiley.gif" alt="Smile Darth Vader" />
+		</p>
+		<div id="area">Interact!</div>
+	</section>
+
+	<script>
+		/*
+	alert('My first message!')
+	confirm('Are you enjoying JS?')
+
+	var name = prompt('What\'s your name?')
+	alert('Nice to meet you ' + name + '!')
+
+	var n1 = Number(prompt('Primeiro número'))
+	var n2 = Number(prompt('Segundo número'))
+	var sum = n1 + n2
+	alert(`A soma entre ${n1} e ${n2} é ${sum}`)
+
+	name = prompt('Digite seu nome.')
+	document.write(`Olá <strong>${name.toUpperCase()}</strong>! Seu nome tem ${name.length} letras.`)
+	*/
+		var action = document.getElementById('area');
+		action.addEventListener('mouseenter', entrar);
+		action.addEventListener('click', clicar);
+		action.addEventListener('mouseout', sair);
+
+		function entrar() {
+			action.innerText = 'Click!';
+			action.style.background = 'darkred';
+		}
+
+		function clicar() {
+			action.innerText = 'Clicked!';
+			action.style.background = 'darkgreen';
+		}
+
+		function sair() {
+			action.innerText = 'Interact!';
+			action.style.background = 'black';
+		}
+	</script>
+</body>
+
+</html>

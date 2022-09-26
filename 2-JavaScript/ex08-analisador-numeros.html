@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ex08 - Analisador Númeeros</title>
+    <link rel="shortcut icon" href="imgs/w.bmp" type="image/x-icon">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="scripts/ex08.js"></script>
+    <style>
+        #ilist {
+            min-width: 200px;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>Number Analyzer</h1>
+    </header>
+
+    <section>
+        <form onsubmit="add()">
+            <label for="inumber">Numbers (1-100):</label>
+            <input type="number" name="inumber" id="inumber" min="1" max="100" value="1" size="7" required>
+            <input type="submit" value="Add">
+        </form>
+        <div>
+            <select name="ilist" id="ilist" size="10"></select><br>
+            <input type="button" value="Finish" onclick="results()">
+            <p id="iresults"></p>
+        </div>
+    </section>
+</body>
+
+</html>

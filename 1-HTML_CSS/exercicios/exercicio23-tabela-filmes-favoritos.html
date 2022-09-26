@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ex 23 - Filmes Favoritos</title>
+    <link rel="shortcut icon" href="imgs/w.bmp" type="image/x-icon">
+    <style>
+        body {
+            background-color: darkgray;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        h1 {
+            text-align: center;
+        }
+
+        table {
+            border-collapse: collapse;
+        }
+
+        caption {
+            font-size: 1.5em;
+            font-weight: bold;
+            padding: 10px;
+        }
+
+        th, td {
+            border: 1px solid black;
+            text-align: center;
+            padding: 10px;
+            min-width: 100px;
+        }
+
+        th {
+            text-transform: uppercase;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>TABELAS</h1>
+    <p>th - Table Header - Define o cabeçalho de uma célula.<br>
+       tr - Table Row - Define uma linha.<br>
+       td - Table Date - Define uma célula.<br>
+    </p>
+    <hr>
+
+    <table>
+        <caption>Filmes Favoritos</caption>
+        <thead>
+            <th scope="col">Grupos</th>
+            <th scope="col">Nomes</th>
+            <th colspan="3" scope="colgroup">Filmes</th>
+        </thead>
+
+        <tbody>
+            <tr>
+                <th rowspan="3" scope="rowgroup">Homens</th>
+                <td>Anthony</td>
+                <td>It - A Coisa</td>
+                <td>Vingadores</td>
+                <td>Invocação do Mal</td>
+            </tr>
+            <tr>
+                <td>Toninho</td>
+                <td>A Espera de um Milagre</td>
+                <td><mark>Um Sonho de Liberdade</mark></td>
+                <td>O Poderoso Chefão</td>
+            </tr>
+            <tr>
+                <td>Wesley</td>
+                <td>Star Wars - Episode I</td>
+                <td>Batman - O Cavaleiro das Trevas</td>
+                <td>Ilha do Medo</td>
+            </tr>
+
+            <tr>
+                <th rowspan="3" scope="rowgroup">Mulheres</th>
+                <td>Carol</td>
+                <td>Harry Potter</td>
+                <td>Crepúsculo</td>
+                <td>Jogos Vorazes</td>
+            </tr>
+             <tr>
+                <td>Ivy</td>
+                <td>Frozen</td>
+                <td>Moana</td>
+                <td>O Rei Leão</td>
+            </tr>
+            <tr>
+                <td>Leta</td>
+                <td>Jogos Mortais</td>
+                <td>O Silêncio dos Inocentes</td>
+                <td>A Origem</td>
+            </tr>
+        </tbody>
+
+        <tfoot>
+            <th colspan="4" scope="row">Total</td>
+            <td>1000</td>
+        </tfoot>
+    </table>
+
+</body>
+
+</html>

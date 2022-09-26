@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Ex03 - Nationality</title>
+	<link rel="shortcut icon" href="imgs/w.bmp" type="image/x-icon">
+	<link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+	<h1>Nationality Checker</h1>
+	<hr>
+
+
+	<div>
+		<form action="">
+			<label for="inat"> Enter your Nationality: </label>
+				<input type="text" name="nat" id="inat" placeholder="Nationality">
+				<input type="button" value="Submit" onclick="checknat()">
+		</form>
+		<p>Your Nationality is <span id="nation"></span></p>
+	</div>
+
+	<script>
+		function checknat() {
+			var nat = document.getElementById('inat').value;
+			nat = nat.toUpperCase();
+			var nation = document.getElementById('nation');
+			(nat == 'BRASIL' || nat == 'BRAZIL')
+			? (nation.innerHTML = 'Brazilian')
+			: (nation.innerHTML = 'Foreign');
+		}
+	</script>
+</body>
+
+</html>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ex 11 - Mídias em HTML5</title>
+    <link rel="shortcut icon" href="imgs/w.bmp" type="image/x-icon">
+</head>
+
+<body>
+    <h1>Imagem dinâmica</h1>
+    <hr>
+    <p>Tente abrir esse site em vários dispositivos diferentes ou simplesmente aumente e diminua o tamanho do seu
+        navegador.</p>
+    <picture>
+        <source media="(max-width: 750px)" srcset="imgs/ex11-foto-p.png" type="image/png">
+        <source media="(max-width: 1050px)" srcset="imgs/ex11-foto-m.png" type="image/png">
+        <img src="imgs/ex11-foto-g.png" alt="Imagem flexível">
+    </picture>
+    <hr>
+    <h1>Reproduzindo Áudio</h1>
+    <p>Vamos aprender a reproduzir áudios em HTML5.</p>
+    <audio preload="metadata" controls autoplay loop>
+        <source src="midias/ex11-happy-mistake.mp3" type="audio/mpeg">
+        <p>Seu navegador não é compatível com o arquivo de audio. <a href="midias/ex11-happy-mistake.mp3">Clique aqui para
+                fazer download do arquivo.</a></p>
+    </audio>
+    <hr>
+    <h1>Inserindo videos hospedados localmente</h1>
+    <video width="560" poster="imgs/ex11-limoes-capa.png" controls>
+        <source src="midias/ex11-meu-video.m4v" type="video/mp4">
+    </video>
+    <hr>
+    <h1>Inserindo videos externos</h1>
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/vrj_CsDbPJk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+    <h1>Iframe</h1>
+    <iframe width="560" height="315" src="midias/ex11-meu-video.m4v" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"></iframe>
+    <hr>
+</body>
+
+</html>

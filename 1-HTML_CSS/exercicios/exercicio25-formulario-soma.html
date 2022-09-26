@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ex 25 - Formulários Input/Output</title>
+    <link rel="shortcut icon" href="imgs/w.bmp" type="image/x-icon">
+</head>
+
+<body>
+    <h1>Ex 25 - Formulários com Input e Output</h1>
+
+    <form action="">
+        <p>
+            <label for="inum1">Número 1: </label>
+            <input type="number" name="num1" id="inum1" size="10" oninput="isoma.innerHTML = Number(inum1.value)+ Number(inum2.value)">
+        </p>
+        <p>
+            <label for="inum2">Número 2: </label>
+            <input type="number" name="num2" id="inum2" size="10" oninput="isoma.innerHTML = Number(inum1.value)+ Number(inum2.value)">
+        </p>
+        <p>
+            <label for="isoma">Soma: </label>
+            <output name="soma" id="isoma">0</output>
+        </p>
+        <p>
+            <input type="reset" onclick="resetOutput1()">
+        </p>
+    </form>
+    <hr>
+
+    <form action="">
+        <p>
+            <label for="inum">Número: </label>
+            <input type="range" name="num" id="inum" min="0" max="10" value="5" oninput="ival.innerHTML = Number(inum.value)">
+            <output id="ival">5</output>
+        </p>
+        <p>
+            <input type="reset" onclick="resetOutput2()">
+        </p>
+    </form>
+    <hr>
+
+    <form action="">
+        <p>
+            <label for="iano">Em que ano você nasceu?</label>
+            <input type="number" name="ano" id="iano" min="1900" max="2022" value="2000" size="6" oninput="calcIdade()">
+        </p>
+
+        <p>
+            <label for="iidade">Sua idade é: </label>
+            <output id="iidade">22</output>
+        </p>
+
+        <p>
+            <input type="reset" onclick="resetOutput3()">
+        </p>
+    </form>
+
+    <script>
+        function calcIdade() {
+            let atual = new Date().getFullYear()
+            iidade.innerHTML = Number(atual) - Number(iano.value)
+        }
+
+        function resetOutput1() {
+            document.getElementById('isoma').innerHTML = "0"
+        }
+
+        function resetOutput2() {
+            document.getElementById('ival').innerHTML = "5"
+        }
+
+        function resetOutput3() {
+            document.getElementById('iidade').innerHTML = "22"
+        }
+    </script>
+
+</body>
+
+</html>

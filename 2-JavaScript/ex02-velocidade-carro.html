@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Ex02 - Speed Trap</title>
+	<link rel="shortcut icon" href="imgs/w.bmp" type="image/x-icon">
+	<link rel="stylesheet" href="css/style.css">
+
+	<style>
+		h1 {
+			font-size: 26pt;
+			text-align: center;
+		}
+
+		#results {
+			visibility: hidden;
+		}
+	</style>
+</head>
+
+<body>
+	<section>
+		<h1>Fine System</h1>
+		<form action="">
+			<p>
+				<label for="ispeed">Enter the car speed:</label>
+				<input type="number" name="speed" id="ispeed" size="6px" min="1" max="220" onclick="calc()" onkeyup="calc()"> Km/h
+				<!-- <input type="button" value="Check" onclick="calc()"> -->
+				<input type="reset" value="Reset" onclick="clean()">
+			</p>
+		</form>
+		<h2>Result</h2>
+		<hr>
+		<div id="results">
+			<p>Your current speed is <span id="result"></span> and the maximum speed allowed is 60 km/h.</p>
+			<p id="msg1"></p>
+		</div>
+	</section>
+
+	<script>
+		function calc() {
+			document.getElementById('results').style.visibility = 'visible';
+			var speed = Number(document.getElementById('ispeed').value);
+			var result = document.getElementById('result');
+			var msg1 = document.getElementById('msg1');
+			result.innerHTML = `<strong>${speed} km/h</strong>`;
+			speed > 60
+			? (msg1.innerHTML = 'You have been <strong>FINED</strong>. Respect the speed limits!')
+			: (msg1.innerHTML = 'Respect the speed limits!');
+		}
+
+		function clean() {
+			document.getElementById('results').style.visibility = 'hidden';
+		}
+	</script>
+</body>
+
+</html>

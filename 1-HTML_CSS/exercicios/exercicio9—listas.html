@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ex 9 — Listas</title>
+    <link rel="shortcut icon" href="imgs/w.bmp" type="image/x-icon">
+    <style>
+        @font-face {
+            font-family: NES;
+            src: url('fonts/nes.ttf') format('truetype');
+        }
+
+        @font-face {
+            font-family: SNES;
+            src: url('fonts/snes.ttf');
+        }
+
+        @font-face {
+            font-family: PSX;
+            src: url('fonts/psx.ttf');
+        }
+
+        h1 {
+            text-align: center;
+            font-variant: small-caps;
+        }
+
+        .nes {
+            font-family: NES;
+            font-size: 30px;
+        }
+
+        .snes {
+            font-family: SNES;
+            font-size: 48px;
+        }
+
+        .psx {
+            font-family: PSX;
+            font-size: 43px;
+        }
+
+        ol {
+            font-variant: small-caps;
+            font-size: 1.3em;
+            line-height: 1.2em;
+            margin: 0 0 10px;
+        }
+
+        .sublist {
+            font-size: .8em;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Lista dos meus jogos favoritos</h1>
+    <hr>
+    <ul>
+        <li><strong><span class="nes">NINTENDO</span></strong></li>
+        <ol>
+            <li>Super Mario</li>
+            <ul class="sublist">
+                <li><mark>Super Mario 3</mark></li>
+                <li>Super Mario Bros</li>
+            </ul>
+            <li>Zippy Racer</li>
+            <li>Road Fighter</li>
+            <li>Elevator Action</li>
+        </ol>
+
+        <li><strong><span class="snes">SUPER NINTENDO</span></strong></li>
+        <ol>
+            <li>Super Mario</li>
+            <ul class="sublist">
+                <li>Super Mario World</li>
+                <li>Spw 2: Yoshi Island</li>
+            </ul>
+            <li>Donkey Kong Country</li>
+            <ul class="sublist">
+                <li><mark>Donkey Kong 2</mark></li>
+                <li>Donkey Kong</li>
+            </ul>
+        </ol>
+
+        <li><strong><span class="psx">PLAYSTATION</span></strong></li>
+        <ol>
+            <li><mark>Metal Gear Solid</mark></li>
+            <li>Resident Evil</li>
+            <ul class="sublist">
+                <li>Resident Evil 3</li>
+                <li>Resident Evil 2</li>
+            </ul>
+            <li>Winning Eleven 2000</li>
+        </ol>
+    </ul>
+</body>
+
+</html>

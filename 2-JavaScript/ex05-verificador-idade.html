@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ex05 - Age Checker</title>
+    <link rel="shortcut icon" href="imgs/w.bmp" type="image/x-icon">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <h1>Age Checker</h1>
+    <section>
+        <div>
+            <form action=""></form>
+            <p>
+                <label for="iage">Year of Birth:</label>
+                <input type="number" name="iyear" id="iyear" min="1900" max="2022" value="2000" size="8px">
+            </p>
+
+            <p>
+                <label for="isex">Sex:</label>
+                <input type="radio" name="sex" id="imale" value="Male" checked>
+                <label for="male">Male</label>
+                <input type="radio" name="sex" id="ifemale" value="Female">
+                <label for="female">Female</label>
+            </p>
+
+            <input type="button" name="ibtn" id="ibtn" value="Check" onclick="checkVal()">
+            <div id="iresult"></div>
+        </div>
+    </section>
+</body>
+
+<footer>
+    <p>&copy; 2022 Wesley - All Rights Reserved</p>
+</footer>
+
+<script src="scripts/ex05.js"></script>
+
+</html>
