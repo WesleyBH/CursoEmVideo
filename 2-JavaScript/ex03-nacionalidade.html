@@ -17,12 +17,16 @@
 
 	<div>
 		<form action="">
-			<label for="inat"> Enter your Nationality: </label>
-				<input type="text" name="nat" id="inat" placeholder="Nationality">
+			<label for="inat"> Enter your Country: </label>
+				<input type="text" name="nat" id="inat" placeholder="Country">
 				<input type="button" value="Submit" onclick="checknat()">
 		</form>
 		<p>Your Nationality is <span id="nation"></span></p>
 	</div>
+	
+	<footer>
+		<p>2022 Wesley&copy; - All Rights Reserved</p>
+	</footer>
 
 	<script>
 		function checknat() {
@@ -34,6 +38,7 @@
 			: (nation.innerHTML = 'Foreign');
 		}
 	</script>
+	
 </body>
 
 </html>

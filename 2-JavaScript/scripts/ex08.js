@@ -31,7 +31,7 @@ function results() {
 	mean += sum / values.length;
 	results.innerText = `${values.length} values were registered.`;
 	results.innerText += `\n The highest value is ${max}.`;
-	results.innerText += `\n The lowerst value is ${min}.`;
+	results.innerText += `\n The lowest value is ${min}.`;
 	results.innerText += `\n The sum is ${sum}.`;
 	results.innerText += `\n The mean is ${mean.toFixed(2)}.`;
 }

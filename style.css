@@ -1,0 +1,48 @@
+body {
+    background-color: rgb(35, 35, 35);
+    color: darkorange;
+}
+
+main {
+    background-color: rgba(5, 5, 5, 0.5);
+    border-radius: 10px;
+    padding: 10px;
+    margin: 10px auto;
+    width: fit-content;
+    box-shadow: 3px 3px 5px black;
+}
+
+h1 {
+    text-align: center;
+    margin: 5px 10px;
+    padding: 5px 10px;
+}
+
+h2, ul {
+    margin: 10px;
+}
+
+li {
+    padding: 1px;
+}
+
+a, a:visited {
+    color: white;
+    text-decoration: none;
+}
+
+a:hover {
+    color: darkgoldenrod;
+    text-decoration: none;
+}
+
+footer {
+    background-color: black;
+    color: white;
+    font: italic bold 10pt Arial;
+    font-variant: small-caps;
+    width: fit-content;
+    margin: auto;
+    padding: 0 10px;
+    border-radius: 5px;
+}
