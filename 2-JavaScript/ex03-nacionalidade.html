@@ -8,24 +8,28 @@
 	<title>Ex03 - Nationality</title>
 	<link rel="shortcut icon" href="imgs/w.bmp" type="image/x-icon">
 	<link rel="stylesheet" href="css/style.css">
+	<style>
+		#nation {
+			visibility: hidden;
+		}
+	</style>
 </head>
 
 <body>
-	<h1>Nationality Checker</h1>
+	<h1>Brazilian Checker</h1>
 	<hr>
 
-
 	<div>
-		<form action="">
+		<form>
 			<label for="inat"> Enter your Country: </label>
-				<input type="text" name="nat" id="inat" placeholder="Country">
-				<input type="button" value="Submit" onclick="checknat()">
+			<input type="text" name="nat" id="inat" placeholder="Country" required>
+			<input type="button" value="Submit" onclick="checknat()">
 		</form>
-		<p>Your Nationality is <span id="nation"></span></p>
+		<p><span id="nation">_</span></p>
 	</div>
-	
+
 	<footer>
-		<p>2022 Wesley&copy; - All Rights Reserved</p>
+		<p>2022&copy; Wesley - All Rights Reserved</p>
 	</footer>
 
 	<script>
@@ -33,12 +37,13 @@
 			var nat = document.getElementById('inat').value;
 			nat = nat.toUpperCase();
 			var nation = document.getElementById('nation');
+			nation.style.visibility = "visible"; 
 			(nat == 'BRASIL' || nat == 'BRAZIL')
-			? (nation.innerHTML = 'Brazilian')
-			: (nation.innerHTML = 'Foreign');
+				? (nation.innerHTML = 'You are Brazilian')
+				: (nation.innerHTML = 'You are Foreign');
 		}
 	</script>
-	
+
 </body>
 
 </html>

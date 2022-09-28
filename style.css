@@ -18,7 +18,8 @@ h1 {
     padding: 5px 10px;
 }
 
-h2, ul {
+h2,
+ul {
     margin: 10px;
 }
 
@@ -26,7 +27,9 @@ li {
     padding: 1px;
 }
 
-a, a:visited {
+p,
+a,
+a:visited {
     color: white;
     text-decoration: none;
 }
@@ -45,4 +48,38 @@ footer {
     margin: auto;
     padding: 0 10px;
     border-radius: 5px;
+}
+
+footer > p {
+    border-right: solid 3px rgba(0, 255, 0, 0.75);
+    white-space: nowrap;
+    overflow: hidden;
+    font-family: "Source Code Pro", monospace;
+    color: rgba(255, 255, 255, 0.7);
+}
+
+/* Animation */
+footer > p {
+    animation: animated-text 4s steps(26) 1s 1 normal both,
+    animated-cursor 500ms steps(26) infinite normal;
+}
+
+/* text animation */
+@keyframes animated-text {
+    from {
+        width: 0;
+    }
+    to {
+        width: 222px;
+    }
+}
+
+/* cursor animations */
+@keyframes animated-cursor {
+    from {
+        border-right-color: rgba(255, 255, 255, 0.7);
+    }
+    to {
+        border-right-color: transparent;
+    }
 }
